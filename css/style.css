@@ -321,6 +321,8 @@ template {
   cursor: pointer;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  position: relative;
+  z-index: 100;
 }
 .btn:focus,
 .btn:active {
@@ -340,7 +342,7 @@ template {
   line-height: 17px;
   color: #000000;
   position: relative;
-  z-index: 1;
+  z-index: 100;
 }
 .btn--main-form::after {
   position: absolute;
@@ -1896,6 +1898,8 @@ template {
   .form__title {
     font-size: 16px;
     max-width: 250px;
+    position: relative;
+    z-index: 100;
   }
   .form__radio {
     margin-bottom: 10px;
@@ -2412,11 +2416,13 @@ template {
     width: 100%;
     padding-bottom: 35px;
     padding-top: 30px;
-    background: url("../img/fg-form-3.svg") top left no-repeat, url("../img/fg-form-2.svg") top right no-repeat, url("../img/bg-form4.png") center center no-repeat;
+    background: url("../img/fg-form-4.svg") top left no-repeat, url("../img/fg-form-5.svg") top right no-repeat, url("../img/bg-form4.png") center center no-repeat;
   }
   .form__title {
     font-size: 24px;
     max-width: 400px;
+    position: relative;
+    z-index: 100;
   }
   .form__row {
     width: auto;
