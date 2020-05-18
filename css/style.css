@@ -1907,6 +1907,27 @@ template {
   .form__radio label {
     font-size: 13px;
   }
+  .form__radio span {
+    font-size: 16px;
+  }
+  .radio_label:before {
+    width: 22px;
+    /* ширина блока */
+    height: 22px;
+    /* высота блока */
+    top: -2px;
+    /* расстояние от верха родителя */
+    left: 10px;
+    /* расстояние слева от родителя */
+  }
+  .radio_label:after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    top: 1px;
+    left: 13px;
+  }
   .form-advantage {
     max-width: 290px;
     width: 100%;
