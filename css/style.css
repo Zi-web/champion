@@ -352,11 +352,22 @@ template {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background-image: url(../img/btn_vector.png);
+  background: url(../img/btn-vector.svg);
   background-repeat: no-repeat;
   z-index: 2;
   opacity: 0.2;
+}
+.btn--main-form::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
   background: #066083;
+  z-index: 3;
+  opacity: 0.2;
 }
 .btn-main-inner {
   position: relative;
@@ -367,6 +378,7 @@ template {
   line-height: 22px;
   margin-top: 2px;
   border-radius: 10px;
+  /*background: #FF9900;*/
   background: #FF9900;
   font-style: normal;
   font-weight: 600;
@@ -395,7 +407,7 @@ template {
   border-radius: 10px;
   font-family: 'Montserrat', Arial, sans-serif;
   position: relative;
-  background: url("../img/fg-form-1.svg") top left no-repeat, url("../img/fg-form-2.svg") top right no-repeat, url("../img/bg-form.png") center center no-repeat;
+  background: url("../img/fg-form-3.svg") top left no-repeat, url("../img/fg-form-2.svg") top right no-repeat, url("../img/bg-form3.png") center center no-repeat;
   border: 1px solid #E5E5E5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -403,6 +415,7 @@ template {
           box-shadow: 0px 1.62928px 1.62928px rgba(0, 0, 0, 0.25), inset 0px 1.62928px 1.62928px rgba(0, 0, 0, 0.25);
   text-align: center;
   padding-bottom: 10px;
+  padding-right: 10px;
   margin: 15px;
 }
 .form::after {
@@ -464,12 +477,13 @@ template {
   text-align: left;
 }
 .form__radio span {
+  display: inline-block;
   font-weight: 600;
   font-size: 11px;
   line-height: 120%;
   text-transform: uppercase;
   color: #FFFFFF;
-  padding-left: 17px;
+  margin-left: 17px;
 }
 .radio_input {
   -webkit-appearance: none;
@@ -481,43 +495,34 @@ template {
   position: absolute;
 }
 .radio_label {
-  padding-left: 20px;
+  /*padding-left: 20px;*/
   font-size: 1rem;
   color: #444;
   cursor: pointer;
+  width: 20px;
+  display: block;
 }
 .radio_label:before {
   content: "";
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
-  /* не в строку */
   width: 18px;
-  /* ширина блока */
   height: 18px;
-  /* высота блока */
   border: 3px solid #ffffff;
-  /* рамка */
   background-color: transparent;
-  /* цвет фона */
   border-radius: 50%;
-  /* получаем круг */
   position: absolute;
-  /* расположен точно в родителе */
   top: -2px;
-  /* расстояние от верха родителя */
   left: 10px;
-  /* расстояние слева от родителя */
   z-index: 1;
-  /* на нижнем слое */
   -webkit-transition: border 0.1s linear;
   transition: border 0.1s linear;
-  /* плавный переход для border */
 }
 .radio_label:after {
   content: "";
   display: block;
-  width: 12px;
+  width: 10px;
   height: 12px;
   background-color: #84B3FF;
   border-radius: 50%;
@@ -2160,7 +2165,16 @@ template {
     width: 100%;
     height: auto;
   }
+  .refill {
+    background-image: url(../img/bg-game.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 80px;
+    z-index: 2;
+  }
   .refill__wrapper h2 {
+    margin-top: 10px;
     font-size: 24px;
   }
   .refill__cards {
@@ -2201,6 +2215,10 @@ template {
   .refill__items-col {
     width: 49%;
   }
+  .contacts {
+    padding-top: 0px;
+    margin-top: -40px;
+  }
   .contacts__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2214,9 +2232,11 @@ template {
   }
   .contacts__items {
     width: 49%;
+    z-index: 3;
   }
   .contacts__form {
     width: 49%;
+    z-index: 3;
   }
   .footer__wrapper {
     margin-right: auto;
